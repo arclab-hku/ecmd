@@ -1,0 +1,26 @@
+image_width: 640
+image_height: 576
+camera_name: rgbd_depth_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [ 504.574,    0.   ,  321.848,
+            0.   ,  504.674,  336.139,
+            0.   ,    0.   ,    1.   ]
+camera_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 8
+  data: [5.3633, 3.35493, -1.08168e-05, -1.43868e-05, 0.163032, 5.69124, 5.13437, 0.887861]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [ 1.,  0.,  0.,
+          0.,  1.,  0.,
+          0.,  0.,  1.]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [ 431.080 ,    0.   ,  321.984,    0.     ,
+          0.      ,  439.671,  348.265,    0.     ,
+          0.      ,    0.   ,    1.   ,    0.     ]

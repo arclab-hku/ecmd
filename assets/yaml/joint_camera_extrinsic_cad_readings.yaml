@@ -1,0 +1,31 @@
+camera_number: 5
+cam0:
+  camera_name: left_regular_camera
+cam1:
+  camera_name: right_regular_camera
+  # transformation from right regular camera to left regular camera
+  T_cam0_cam1: [1.0, 0.0, 0.0, 0.17,
+                0.0, 1.0, 0.0, 0.0 ,
+                0.0, 0.0, 1.0, 0.0 ,
+                0.0, 0.0, 0.0, 1.0 ] 
+cam2:
+  camera_name: left_event_camera
+  # transformation from left event camera to left regular camera
+  T_cam0_cam2: [1.0, 0.0, 0.0,  0.0    ,
+                0.0, 1.0, 0.0, -0.03950,
+                0.0, 0.0, 1.0, -0.01021,
+                0.0, 0.0, 0.0,  1.0    ] 
+cam3:
+  camera_name: right_event_camera
+  # transformation from right event camera to left regular camera
+  T_cam0_cam3: [1.0, 0.0, 0.0,  0.17   ,
+                0.0, 1.0, 0.0, -0.03950,
+                0.0, 0.0, 1.0, -0.01021,
+                0.0, 0.0, 0.0,  1.0    ] 
+cam4:
+  camera_name: rgbd_color_camera
+  # transformation from rgbd color camera to left regular camera
+  T_cam0_cam4: [1.0, 0.0, 0.0,  0.11755   ,
+                0.0, 1.0, 0.0, -0.03800   ,
+                0.0, 0.0, 1.0,  0.01154918,
+                0.0, 0.0, 0.0,  1.0       ] 

@@ -1,0 +1,15 @@
+camera_number: 2
+cam0:
+  camera_name: left_regular_camera
+  # transformation from LiDAR to left regular camera
+  T_cam_lidar: [ 0.0119197 , -0.999929  ,  0.0000523,  0.0853154,
+                -0.00648951, -0.00012969, -0.999979 , -0.0684439,
+                 0.999908  ,  0.0119191 , -0.0064906, -0.0958121,
+                 0         ,  0         ,  0        ,  1        ]
+cam1:
+  camera_name: right_regular_camera
+  # transformation from LiDAR to right regular camera
+  T_cam_lidar: [ 0.00229446, -0.999714  , -0.0238084 , -0.0828514,
+                -0.00737735,  0.0237909 , -0.99969   , -0.0633996,
+                 0.99997   ,  0.00246939, -0.00732065, -0.0852966,
+                 0         ,  0         ,  0         ,  1        ]

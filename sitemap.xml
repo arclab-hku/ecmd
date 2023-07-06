@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<loc>http://localhost:4000/UrbanDVS/about/ground_truth/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/UrbanDVS/about/sensor/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/UrbanDVS/about/synchronization/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/UrbanDVS/calibration/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/UrbanDVS/competition/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/UrbanDVS/contact/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/UrbanDVS/download/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/UrbanDVS/</loc>
+</url>
+</urlset>
