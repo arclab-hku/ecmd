@@ -163,7 +163,7 @@
 <ul>
   <li>Captured by a full <a href="/UrbanDVS/about/synchronization">hardware-synchronized</a> <a href="/UrbanDVS/about/sensor">sensor suite</a> that includes an event stereo camera, a regular stereo camera, an RGB-D sensor, a LiDAR, and an IMU;</li>
   <li>Covering the <a href="/UrbanDVS/download">full spectrum</a> of motion dynamics, environment complexities, and illumination conditions;</li>
-  <li>Complete six degrees of freedom <a href="/UrbanDVS/about/ground_truth">ground truth signals</a> for both small and large-scale scenarios, and highly-accurate <a href="/vector/calibration">intrinsic and extrinsic calibration</a>.</li>
+  <li>Complete six degrees of freedom <a href="/UrbanDVS/about/ground_truth">ground truth signals</a> for both small and large-scale scenarios, and highly-accurate <a href="/UrbanDVS/calibration">intrinsic and extrinsic calibration</a>.</li>
 </ul>
 
 <p><br></p>
@@ -175,7 +175,7 @@
             <h2>News</h2>
             <div class="table-responsive">
               <table class="table table-sm table-borderless"> 
-                <tr>
+                <!-- <tr>
                   <th scope="row">Sept 20, 2022</th>
                   <td>
                     Watch our video presentation for IROS'22 on <a href="https://youtu.be/WZMeKwhj434">Youtube</a> or on <a href="https://www.bilibili.com/video/BV1kd4y1B7Ug/">Bilibili</a>.
@@ -209,9 +209,9 @@
                     <a href="https://github.com/mgaoling/mpl_calibration_toolbox" target="_blank" rel="noopener noreferrer">Calibration toolbox</a>, along with <a href="/vector/calibration">data sequences and calibration results</a>, is now available.
  
                   </td>
-                </tr> 
+                </tr>  -->
                 <tr>
-                  <th scope="row">Feb 24, 2022</th>
+                  <th scope="row">June 1, 2023</th>
                   <td>
                     UrbanDVS Benchmark goes live!
  
@@ -229,33 +229,42 @@
             <ol class="bibliography"><li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-2 abbr"><abbr class="badge">RA-L</abbr></div>
+        <!-- <div class="col-sm-2 abbr"><abbr class="badge">RA-L</abbr></div> -->
+        <!-- 上面这个RAL显示好像有点问题 -->
+
 
         <!-- Entry bib key -->
-        <div id="gao2022vector" class="col-sm-8">
+        <div id="urbandvs2023" class="col-sm-8">
         
           <!-- Title -->
-          <div class="title">VECtor: A Versatile Event-Centric Benchmark for Multi-Sensor SLAM</div>
+          <div class="title">UrbanDVS: An Event-Centric Multisensory Dataset for Urban Driving Scenarios</div>
           <!-- Author -->
-          <div class="author">L. Gao, Y. Liang, J. Yang, S. Wu, C. Wang, J. Chen, and L. Kneip
+          <div class="author">P. Chen, W. Guan, F. Huang, Y. Zhong, W. Wen, L. Hsu, and P. Lu
           </div>
 
           <!-- Journal/Book title and date -->
           <div class="periodical">
-            <em>IEEE Robotics and Automation Letters</em> 2022
+            <em>xxxx</em> 2023
           </div>
         
           <!-- Links/Buttons -->
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="http://arxiv.org/abs/2207.01404" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">arXiv</a>
-            <a href="/vector/assets/pdf/VECtor.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
-            <a href="/vector/assets/pdf/supplementary_material.pdf" class="btn btn-sm z-depth-0" role="button">Supp</a>
+            <a href="XXXXXX" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <a href="/UrbanDVS/assets/pdf/UrbanDVS.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="/UrbanDVS/assets/pdf/supplementary_material.pdf" class="btn btn-sm z-depth-0" role="button">Supp</a>
+            <!-- 以上三个内容依次放，arxiv网址，我们论文的pdf，如果有补充材料就加，没有就不加 -->
           </div>
 
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
-            <p>Event cameras have recently gained in popularity as they hold strong potential to complement regular cameras in situations of high dynamics or challenging illumination. An important problem that may benefit from the addition of an event camera is given by Simultaneous Localization And Mapping (SLAM). However, in order to ensure progress on event-inclusive multi-sensor SLAM, novel benchmark sequences are needed. Our contribution is the first complete set of benchmark datasets captured with a multi-sensor setup containing an event-based stereo camera, a regular stereo camera, multiple depth sensors, and an inertial measurement unit. The setup is fully hardware-synchronized and underwent accurate extrinsic calibration. All sequences come with ground truth data captured by highly accurate external reference devices such as a motion capture system. Individual sequences include both small and large-scale environments, and cover the specific challenges targeted by dynamic vision sensors.</p>
+            <p>
+              Leveraging multiple sensors enhances complex environmental perception and increases resilience to varying luminance conditions and high-speed motion patterns, achieving precise localization and mapping. 
+              This paper presents, UrbanDVS, an event-centric multisensory dataset comprising xx sequences and covering xx km of urban driving scenarios. 
+              UrbanDVS provides data from two sets of stereo event cameras with different resolutions (640x480, 346x260), stereo RGB cameras, an infrared camera, a top-installed mechanical LiDAR with two slanted LiDAR, three consumer-level GNSS receivers, and a highly accurate IMU. 
+              Meanwhile, we utilize a centimeter-level positioning system, GNSS-INS-RTK navigation system, to attain accurate ground truth of the vehicle. 
+              All sensors are well-calibrated and temporally synchronized at the hardware level, with recording data simultaneously.
+            </p>
           </div>
         </div>
       </div>
@@ -318,12 +327,12 @@
     <!-- Masonry & imagesLoaded -->
   <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script defer src="/vector/assets/js/masonry.js" type="text/javascript"></script>
+  <script defer src="/UrbanDVS/assets/js/masonry.js" type="text/javascript"></script>
     
   <!-- Medium Zoom JS -->
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
-  <script src="/vector/assets/js/zoom.js"></script><!-- Load Common JS -->
-  <script src="/vector/assets/js/common.js"></script>
+  <script src="/UrbanDVS/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script src="/UrbanDVS/assets/js/common.js"></script>
 
     <!-- MathJax -->
   <script type="text/javascript">
