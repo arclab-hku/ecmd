@@ -1,4 +1,0 @@
-imu_topic: "/imu/data"
-imu_rate: 200
-measure_rate: 200
-sequence_time: 18000 # 5 hours in seconds

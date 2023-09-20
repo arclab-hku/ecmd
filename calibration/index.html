@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>VECtor Benchmark   | Calibration</title>
-    <meta name="author" content="VECtor Benchmark  " />
-    <meta name="description" content="A Versatile Event-Centric Benchmark for Multi-Sensor SLAM.
+    <title>The ECMD Datasets | Calibration </title>
+    <meta name="author" content="The ECMD Datasets " />
+    <meta name="description" content="An Event-Centric Multisensory Driving Dataset for SLAM.
 " />
-    <meta name="keywords" content="VECtor Benchmark, Event-based, Multi-Sensor, Dataset" />
+    <meta name="keywords" content="Event-based Vision, Multi-sensor, SLAM, Autonomous Driving" />
 
     <!-- OpenGraph -->
-    <meta property="og:site_name" content="VECtor Benchmark  " />
+    <meta property="og:site_name" content="The ECMD Datasets  " />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="VECtor Benchmark   | Calibration" />
-    <meta property="og:url" content="http://localhost:4000/vector/calibration/" />
-    <meta property="og:description" content="A Versatile Event-Centric Benchmark for Multi-Sensor SLAM.
+    <meta property="og:title" content="The ECMD Datasets   | Calibration" />
+    <meta property="og:url" content="http://localhost:4000/ecmd/sensors" />
+    <meta property="og:description" content="An Event-Centric Multisensory Driving Dataset for SLAM.
 " />
     
     <meta property="og:locale" content="en" />
@@ -28,7 +28,7 @@
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Calibration" />
-    <meta name="twitter:description" content="A Versatile Event-Centric Benchmark for Multi-Sensor SLAM.
+    <meta name="twitter:description" content="An Event-Centric Multisensory Driving Dataset for SLAM.
 " />
     
     
@@ -39,15 +39,15 @@
         "author":
         {
           "@type": "Person",
-          "name": "VECtor Benchmark  "
+          "name": "The ECMD Datasets  "
         },
-        "url": "http://localhost:4000/vector/calibration/",
+        "url": "http://localhost:4000/ecmd/",
         "@type": "WebSite",
-        "description": "A Versatile Event-Centric Benchmark for Multi-Sensor SLAM.
+        "description": "An Event-Centric Multisensory Driving Dataset for SLAM.
 ",
         "headline": "Calibration",
-        "sameAs": ["https://star-datasets.github.io/", "https://mpl.sist.shanghaitech.edu.cn/"],
-        "name": "VECtor Benchmark  ",
+        "sameAs": ["https://github.com/cpymaple/Event_based_VO-VIO-SLAM", "https://arclab.hku.hk/"],
+        "name": "The ECMD Datasets  ",
         "@context": "https://schema.org"
       }
     </script>
@@ -60,17 +60,22 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Barriecito&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/PASTIE.css" media="none" id="highlight_theme_light" />
 
     <!-- Styles -->
+
+    <link rel="shortcut icon" href="https://cpymaple.github.io/ecmd/assets/img/hku_logo.png"/>
     
-    <link rel="shortcut icon" href="/vector/assets/img/mpl_icon.png"/>
-    
-    <link rel="stylesheet" href="/vector/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/vector/calibration/">
+    <link rel="stylesheet" href="https://cpymaple.github.io/ecmd/assets/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/ecmd/sensors">
+    <link rel="stylesheet" href="https://cpymaple.github.io/ecmd/assets/css/fonts.css">
+    <link rel="stylesheet" href="/ecmd/assets/css/fonts.css">
     
     <!-- Dark Mode -->
     
@@ -86,7 +91,7 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
-          <a class="navbar-brand title font-weight-lighter" href="http://localhost:4000/vector/"><span class="font-weight-bold">VECtor Benchmark</span>   </a>
+          <a class="navbar-brand title font-weight-lighter" href="http://localhost:4000/ecmd/"><span class="font-weight: 600">ECMD Dataset</span>   </a>
           <!-- Navbar Toggle -->
           <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -99,43 +104,26 @@
             <ul class="navbar-nav ml-auto flex-nowrap">
 
               <!-- Home -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/vector/">Home</a>
+              <li class="nav-item">
+                <a class="nav-link" href="/ecmd/">Home</a>
               </li>
-
+              
               <!-- Other pages -->
-                <li class="nav-item dropdown ">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/vector/about/sensor/">Sensor Suite</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/vector/about/synchronization/">Synchronization</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/vector/about/ground_truth/">Ground Truth</a>
-                  </div>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/ecmd/sensors/">Sensors</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="/vector/calibration/">Calibration<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="/ecmd/calibration/">Calibration<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="/vector/download/">Download</a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="/vector/competition/">Competition</a>
-                </li>
-                <li class="nav-item dropdown ">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="https://github.com/mgaoling/mpl_calibration_toolbox/issues" target="_blank" rel="noopener noreferrer">Calibration Issue</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="https://github.com/mgaoling/mpl_dataset_toolbox/issues" target="_blank" rel="noopener noreferrer">Dataset Issue</a>
-                  </div>
+                  <a class="nav-link" href="/ecmd/download/">Download</a>
                 </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+<!-- 以上为include -->
 
     <!-- Content -->
     <div class="container mt-5">
@@ -150,153 +138,132 @@
           <article>
             <p><br></p>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+  <!-- <figure style="text-align: center;"> -->
+    <!-- <img style = "width: 90%" src="/ecmd/assets/img/sensors.png" alt="Image description"> -->
+    <!-- 放一张类似于VECtor calibration的图片, 主要是表现各个传感器的相互关联图-->
+ <!-- </figure> -->
 
-  <picture>
-  	<!-- Ensure image got properly displayed (issue #537) -->
-    <!-- <source media="(max-width: 480px)" srcset="/vector/assets/img/calibration-480.webp" />
-    <source media="(max-width: 800px)" srcset="/vector/assets/img/calibration-800.webp" />
-    <source media="(max-width: 1400px)" srcset="/vector/assets/img/calibration-1400.webp" />
-    -->
+ <div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+      <figure>
 
-    <!-- Fallback to the original file -->
-    <img class="img-fluid rounded z-depth-1" src="/vector/assets/img/calibration.png" title="calibration">
+<picture>
 
-  </picture>
+  <!-- Fallback to the original file -->
+  <img class="img-fluid rounded z-depth-1" src="https://cpymaple.github.io/ecmd/assets/img/calibration.JPG" title="calibration">
+
+</picture>
 
 </figure>
 
-    </div>
-</div>
-<div class="caption" style="text-align:left;">
-Illustration of required calibration variables. Nodes: sensor type (yellow/void background color indicates need/no need for intrinsic calibration). Blue edges: joint camera extrinsic calibration. Cyan edges: Camera-IMU extrinsic calibration. Orange edges: Camera-MoCap hand-eye calibration. Red edges: Camera-LiDAR extrinsic calibration. The variables are calibrated in the listed order.
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+      <figure>
+
+<picture>
+
+  <!-- Fallback to the original file -->
+  <img class="img-fluid rounded z-depth-1" src="https://cpymaple.github.io/ecmd/assets/img/infrared_calibration.JPG" title="infrared_calibration">
+
+</picture>
+
+</figure>
+
+  </div>
 </div>
 
 <p><br></p>
 
-<h4><a href="https://github.com/mgaoling/mpl_calibration_toolbox" target="_blank" rel="noopener noreferrer">MPL Calibration Toolbox</a></h4>
+<!-- <h4><a href="https://github.com/mgaoling/mpl_calibration_toolbox" target="_blank" rel="noopener noreferrer">MPL Calibration Toolbox</a></h4>
 
 <p><br></p>
 
 <p>We provide an additional, easy-to-use toolbox to execute and reproduce the calibration tasks with detailed instructions. Related configuration files, data sequences, and calibration results can be found below.</p>
 
-<p><br></p>
+<p><br></p> -->
 
-<h4>Intrinsics</h4>
-
-<p><br></p>
-
-<p>All camera intrinsics, including the focal lengths, the optical center, and the distortion parameters, are calibrated using the official <a href="http://wiki.ros.org/camera_calibration" target="_blank" rel="noopener noreferrer">ROS Camera Calibration toolbox</a> and by gently moving in front of a 9 x 6 checkerboard visualized on a computer screen. The choice of a virtual checkerboard enables display in either static or blinking mode. The latter is particularly useful for event camera calibration, as it produces accumulated event images with a sharp appearance of the checkerboard. Images that contain too much blur have been manually removed.</p>
-
-<ul>
-  <li>
-<strong>Left Event Camera Intrinsics</strong>: <a href="/vector/assets/zip/left_event_camera_intrinsic_data.zip">data</a>, <a href="/vector/assets/yaml/left_event_camera_intrinsic_results.yaml">results</a>
-</li>
-  <li>
-<strong>Right Event Camera Intrinsics</strong>: <a href="/vector/assets/zip/right_event_camera_intrinsic_data.zip">data</a>, <a href="/vector/assets/yaml/right_event_camera_intrinsic_results.yaml">results</a>
-</li>
-  <li>
-<strong>Left Regular Camera Intrinsics</strong>: <a href="https://drive.google.com/file/d/14kyJ8MjtToM6a4oAhFhRudnTbslQass8/view?usp=sharing" target="_blank" rel="noopener noreferrer">data</a>, <a href="/vector/assets/yaml/left_regular_camera_intrinsic_results.yaml">results</a>
-</li>
-  <li>
-<strong>Right Regular Camera Intrinsics</strong>: <a href="https://drive.google.com/file/d/16Jdpe8NzCeRH6V2EA8nPbfr7GrgXa8NJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">data</a>, <a href="/vector/assets/yaml/right_regular_camera_intrinsic_results.yaml">results</a>
-</li>
-</ul>
-
-<p>Note that we take the factory calibration result for the RGB-D sensor (intrinsics of both color and depth camera as well as extrinsics between them).</p>
-
-<ul>
-  <li>
-<strong>RGB-D Color Camera Intrinsics</strong>: <a href="/vector/assets/yaml/rgbd_color_camera_factory_intrinsic_results.yaml">factory results</a>
-</li>
-  <li>
-<strong>RGB-D Depth Camera Intrinsics</strong>: <a href="/vector/assets/yaml/rgbd_depth_camera_factory_intrinsic_results.yaml">factory results</a>
-</li>
-  <li>
-<strong>RGB-D Camera Extrinsics</strong>: <a href="/vector/assets/yaml/rgbd_camera_factory_extrinsic_results.yaml">factory results</a>
-</li>
-  <li>
-<strong>[NEW 2022-05] RGB-D Camera Extrinsics</strong>: <a href="/vector/assets/zip/rgbd_camera_extrinsic_config.zip">config</a>, <a href="https://drive.google.com/file/d/1fcBWoUvho9XLh_a6FUyv_wS186OiZvie/view?usp=sharing" target="_blank" rel="noopener noreferrer">data</a>, <a href="/vector/assets/yaml/rgbd_camera_calibrated_extrinsic_results.yaml">results</a>
-</li>
-</ul>
-
-<p>The IMU intrinsics (i.e. the statistical properties of the accelerometer and gyroscope signals, including bias random walk and noise densities) are calibrated using the <a href="https://github.com/ori-drs/allan_variance_ros" target="_blank" rel="noopener noreferrer">Allan Variance ROS toolbox</a> with a 5-hour-long IMU sequence by putting the sensor flat on the ground with no perturbation.</p>
-
-<ul>
-  <li>
-<strong>IMU Intrinsics</strong>: <a href="/vector/assets/yaml/imu_intrinsic_config.yaml">config</a>, <a href="https://drive.google.com/file/d/1AjPlXVeUWJTWQsogvMMj3rxYb4tk_dFO/view?usp=sharing" target="_blank" rel="noopener noreferrer">data</a>, <a href="/vector/assets/yaml/imu_intrinsic_results.yaml">results</a>
-</li>
-</ul>
+<h3>1. Time synchronization</h3>
 
 <p><br></p>
 
-<h4>Joint Camera Extrinsic Calibration</h4>
+<p style="text-align: justify;">
+We use a Precision Time Protocol (PTP) device to synchronize the clocks of various data collection devices across the sensor network. The PTP ensures time accuracy within nanoseconds. 
+The synchronization device acquires the NMEA output and pulse-per-second (PPS) signal from a u-blox M8T GNSS receiver to align the ROS time of the onboard computers with the GPS time. 
+This enables sensors such as cameras, LIDAR and IMU to record timestamps based on the synchronized GPS time.
+</p>
 
 <p><br></p>
 
-<p>In order to determine the extrinsics of the multi-camera system, we point the sensor setup towards the screen and record both static and blinking checkerboard patterns with known size. For each observation, the relative position between screen and sensors is kept still by putting the sensor suite steadily on a tripod. The board is maintained within the field of view of all cameras. Note that here we use the color camera on the RGB-D sensor to jointly calibrate its extrinsics. The extrinsics of the depth camera are obtained by the known internal parameters of the depth camera, and the rolling shutter effect is safely ignored as no motion between cameras and pattern is involved. The extrinsics are calculated by detecting corner points on the checkerboard pattern and applying PnP to the resulting 2D-3D correspondences. The result is refined by <a href="http://ceres-solver.org/" target="_blank" rel="noopener noreferrer">Ceres Solver</a>-based reprojection error minimization. We finally validate the estimated extrinsic parameters by analyzing the quality of depth map reprojections and by comparing the result against the measurements from the CAD model.</p>
-
-<ul>
-  <li>
-<strong>Joint Camera Extrinsics (CAD model)</strong>: <a href="/vector/assets/yaml/joint_camera_extrinsic_cad_readings.yaml">CAD readings</a>
-</li>
-  <li>
-<strong>Joint Camera Extrinsics (small-scale)</strong>: <a href="https://drive.google.com/file/d/1384kuy7H1c1579InPjM0AX0bya2xdapm/view?usp=sharing" target="_blank" rel="noopener noreferrer">data</a>, <a href="/vector/assets/yaml/small_scale_joint_camera_extrinsic_results.yaml">results</a>
-</li>
-  <li>
-<strong>Joint Camera Extrinsics (large-scale)</strong>: <a href="https://drive.google.com/file/d/1Aq3UGPefNCzd40KHT2ABO5c2GnxglF3t/view?usp=sharing" target="_blank" rel="noopener noreferrer">data</a>, <a href="/vector/assets/yaml/large_scale_joint_camera_extrinsic_results.yaml">results</a>
-</li>
-</ul>
+<h3>2. Sensors Calibration</h3>
 
 <p><br></p>
 
-<h4>Camera-IMU Extrinsic Calibration</h4>
+<p style="text-align: justify;">
+For sensor calibration, we first define the coordinate of Xsens Mti-30 as the body frame. Then we meticulously calibrate the intrinsics of each sensor with the extrinsics between the external IMU and the rest sensors.  
+More details of the calibration sequence, platform layout, and reports of calibration can be found on our website.
+</p>
 
 <p><br></p>
 
-<p>Extrinsic transformation parameters between the IMU and the regular stereo camera are identified using the <a href="https://github.com/ethz-asl/kalibr" target="_blank" rel="noopener noreferrer">Kalibr toolbox</a>. The visual-inertial system is directed towards a static 6 x 6 April-grid board, and the board is constantly maintained within the field of view of both regular cameras. All six axes of the IMU are properly excited, and the calibration is conducted under good illumination conditions to further reduce the unwanted side-effects of motion blur. Given prior intrinsics of the regular stereo camera and the IMU and extrinsics between the regular cameras, we limit the calculation to the extrinsics between the IMU and the regular stereo camera, only.</p>
-
-<ul>
-  <li>
-<strong>Camera-IMU Extrinsics (CAD model)</strong>: <a href="/vector/assets/yaml/camera_imu_extrinsic_cad_readings.yaml">CAD readings</a>
-</li>
-  <li>
-<strong>Camera-IMU Extrinsics (small-scale)</strong>: <a href="/vector/assets/zip/small_scale_camera_imu_extrinsic_config.zip">config</a>, <a href="https://drive.google.com/file/d/1465i-dS_yz94IoTu4jb6u5bM_56zWMWx/view?usp=sharing" target="_blank" rel="noopener noreferrer">data1</a>, <a href="/vector/assets/yaml/small_scale_camera_imu_extrinsic_results1.yaml">results1</a> (<a href="https://drive.google.com/file/d/1miffwx2w7gpSOsTo3N03Yxxn6NiP6YjK/view?usp=sharing" target="_blank" rel="noopener noreferrer">data2</a>, <a href="https://drive.google.com/file/d/18EjPSf47BtPZ9OZ25fmNxFw--Du-Pf76/view?usp=sharing" target="_blank" rel="noopener noreferrer">data3</a>)</li>
-  <li>
-<strong>Camera-IMU Extrinsics (large-scale)</strong>: <a href="/vector/assets/zip/large_scale_camera_imu_extrinsic_config.zip">config</a>, <a href="https://drive.google.com/file/d/1_pJDVTo7tE51jFqX7Grcy-MlJe_N9xbk/view?usp=sharing" target="_blank" rel="noopener noreferrer">data1</a>, <a href="/vector/assets/yaml/large_scale_camera_imu_extrinsic_results1.yaml">results1</a> (<a href="https://drive.google.com/file/d/1-bf9dDtVB9-P9tn7uJOLBFVs0ofsBE7D/view?usp=sharing" target="_blank" rel="noopener noreferrer">data2</a>, <a href="https://drive.google.com/file/d/12A24vNKimllHuWoKwbQRgrQLp50l6_wI/view?usp=sharing" target="_blank" rel="noopener noreferrer">data3</a>)</li>
-</ul>
+<h4>2.1. Calibration of Inertial Measurement Unit</h4>
 
 <p><br></p>
 
-<h4>Camera-MoCap Hand-eye Calibration</h4>
+<p style="text-align: justify;">
+  To calibrate the IMU, we position it on a level surface for a duration of three hours, recording the raw measurements. 
+  Utilizing the Kalibr toolbox, we can accurately calibrate the random walk and Gaussian white noise of IMU.
+</p>
 
 <p><br></p>
 
-<p>The MoCap system outputs position measurements of the geometric centers of all markers expressed in a MoCap-specific reference frame. In order to compare recovered trajectories against ground truth, we therefore need to identify a euclidean transformation between the MoCap frame of reference and any other sensor frame. A static 7 x 6 checkerboard is maintained within the field of view of both gently-moving cameras, and MoCap pose measurements are simultaneously recorded. Relative poses from both the MoCap system and the cameras are then used to solve the hand-eye calibration problem using the official <a href="https://docs.opencv.org/4.2.0/d9/d0c/group__calib3d.html" target="_blank" rel="noopener noreferrer">OpenCV calibrateHandEye API</a>.</p>
-
-<ul>
-  <li>
-<strong>Camera-MoCap Extrinsics (small-scale)</strong>: <a href="https://drive.google.com/file/d/1_MYhj0WYVYP4NOQ7HaPylRkde6ObnYTx/view?usp=sharing" target="_blank" rel="noopener noreferrer">data1</a>, <a href="/vector/assets/yaml/camera_mocap_extrinsic_results1.yaml">results1</a> (<a href="https://drive.google.com/file/d/1kv3m8oarr_j7Z3MyJV-kDJnh1f8XHQnF/view?usp=sharing" target="_blank" rel="noopener noreferrer">data2</a>, <a href="https://drive.google.com/file/d/1YWficCZuA-3dNgwfnCo902tsRmwr73J6/view?usp=sharing" target="_blank" rel="noopener noreferrer">data3</a>)</li>
-</ul>
+<h4>2.2. Calibration of Standard Cameras</h4>
 
 <p><br></p>
 
-<h4>Camera-LiDAR Extrinsic Calibration</h4>
+<p style="text-align: justify;">
+  For the calibration of standard cameras, we move the sensor platform against the 9&times;7 checkerboard in XYZ-RPY-axis and collect the sequence of images and IMU.
+  Then intrinsics and extrinsics calibration of standard cameras are achieved by Kalibr toolbox, where the pinhole and radial-tangential camera models are adopted. 
+  The results of calibration are shown in Fig. x.
+</p>
 
 <p><br></p>
 
-<p>Our extrinsic calibration between the LiDAR and the cameras bypasses via a high-quality colored point cloud captured by a FARO scanner. The point cloud is captured in an unfurnished room with simple geometric structure and in which we only place a checkerboard. In order to perform the extrinsic calibration, we then record LiDAR scans and corresponding camera images by moving the sensor setup in this room. The cameras are constantly directed at the checkerboard. Next, we estimate the transformation between the FARO and the LiDAR coordinate frames by point cloud registration. Owing to the fact that the FARO scan is very dense and colored, we can furthermore hand-pick 3D points corresponding to checkerboard corners in the real world. By furthermore detecting those points in the camera images, we can again run the PnP method to obtain FARO to camera transformations. To conclude, the extrinsic parameters between LiDAR and cameras are retrieved by concatenating the above two transformations.</p>
+<h4>2.3. Calibration of Event Cameras</h4>
 
-<ul>
-  <li>
-<strong>Camera-LiDAR Extrinsics (CAD model)</strong>: <a href="/vector/assets/yaml/camera_lidar_extrinsic_cad_readings.yaml">CAD readings</a>
-</li>
-  <li>
-<strong>[UPDATE 2022-08] Camera-LiDAR Extrinsics (large-scale)</strong>: <a href="https://drive.google.com/file/d/1BzU9P8MAiClxBCOJrl8YQpaudNmnrh4k/view?usp=sharing" target="_blank" rel="noopener noreferrer">FARO scanning</a>, <a href="https://drive.google.com/file/d/1MqC3t3yy8NKAr0F5EXQbLtOpc1jTTryI/view?usp=sharing" target="_blank" rel="noopener noreferrer">raw data</a>, <a href="https://drive.google.com/file/d/19S-hi3WFlRxcqT38kQ99d46AKq2wOsjC/view?usp=sharing" target="_blank" rel="noopener noreferrer">processed data</a>, <a href="/vector/assets/yaml/camera_lidar_extrinsic_results.yaml">results</a>
-</li>
-</ul>
+<p><br></p>
+
+<p style="text-align: justify;">
+  For the calibration of event cameras, DAVIS346 can produce fix-rated frames, enabling image-based calibration, while DVXplorer merely produces asynchronous event streams.
+  Therefore, E2VID is used to achieve image reconstruction from event streams.
+  Using the reconstructed checkerboard images, the intrinsics and extrinsics of event cameras can be calibrated following the same procedure as standard cameras.
+</p>
+
+<p><br></p>
+
+<h4>2.4. Calibration of Infrared Cameras</h4>
+
+<p><br></p>
+
+<p style="text-align: justify;">
+  Since infrared cameras solely capture the temperature rather than the intensity difference, we design a distinct checkerboard to make the pattern detectable for both intensity and infrared cameras. 
+  As shown in Fig. x, the checkerboard intervals are affixed with aluminum materials, then using a heating plate to raise the temperature of the calibration board.
+  Since the superior thermal dissipation of aluminum compared to plastic, a temperature contrast emerges between the two materials, enabling infrared cameras to distinctly capture the lattice shape of the checkerboard.
+  With the same approach as standard cameras, the calibration of intrinsics and extrinsics of infrared cameras can be achieved.
+</p>
+
+<p><br></p>
+
+<h4>2.5. Calibration of mechanical LiDAR</h4>
+
+<p><br></p>
+
+<p style="text-align: justify;">
+  Precise temporal offset and extrinsics between LiDAR and IMU are crucial to LiDAR-Inertial Odometry. 
+  For the calibration of mechanical LiDAR, LI-Init is capable of achieving temporal and spatial calibration for LiDAR and IMU without checkerboards or extra devices. 
+  We rotate and move the device around XYZ-axis to ensure sufficient excitation until the data accumulation is completed, thus we acquire the extrinsic transformation between LiDAR and IMU.
+</p>
+
+<p><br></p>
 
           </article>
 
@@ -305,11 +272,11 @@ Illustration of required calibration variables. Nodes: sensor type (yellow/void 
     </div>
 
     <!-- Footer -->    
-    <footer class="fixed-bottom">
+    <footer class="nofixed-bottom">
       <div class="container mt-0" style="width:100%;text-align:center;">
-        © 2022 Mobile Perception Lab, ShanghaiTech University, China. All rights reserved.
+        © 2023 Adaptive Robotics Controls Lab (Arclab), The University of HongKong. All rights reserved.
       </div>
-    </footer>
+    </footer> 
 
     <!-- JavaScripts -->
     <!-- jQuery -->

@@ -9,16 +9,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ECMD Benchmark  </title>
-    <meta name="author" content="ECMD Benchmark  " />
+    <title>The ECMD Datasets  </title>
+    <meta name="author" content="The ECMD Datasets " />
     <meta name="description" content="An Event-Centric Multisensory Driving Dataset for SLAM.
 " />
-    <meta name="keywords" content="ECMD Benchmark, Event-based, Multi-Sensor, Dataset" />
+    <meta name="keywords" content="Event-based Vision, Multi-sensor, SLAM, Autonomous Driving" />
 
     <!-- OpenGraph -->
-    <meta property="og:site_name" content="ECMD Benchmark  " />
+    <meta property="og:site_name" content="The ECMD Datasets  " />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ECMD Benchmark   | Home" />
+    <meta property="og:title" content="The ECMD Datasets   | Home" />
     <meta property="og:url" content="http://localhost:4000/ecmd/" />
     <meta property="og:description" content="An Event-Centric Multisensory Driving Dataset for SLAM.
 " />
@@ -39,15 +39,15 @@
         "author":
         {
           "@type": "Person",
-          "name": "ECMD Benchmark  "
+          "name": "The ECMD Datasets  "
         },
         "url": "http://localhost:4000/ECMD/",
         "@type": "WebSite",
         "description": "An Event-Centric Multisensory Driving Dataset for SLAM.
 ",
         "headline": "Home",
-        "sameAs": ["https://github.com/arclab-hku/Event_based_VO-VIO-SLAM", "https://arclab.hku.hk/"],
-        "name": "ECMD Benchmark  ",
+        "sameAs": ["https://github.com/cpymaple/Event_based_VO-VIO-SLAM", "https://arclab.hku.hk/"],
+        "name": "The ECMD Datasets  ",
         "@context": "https://schema.org"
       }
     </script>
@@ -60,19 +60,22 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Barriecito&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/PASTIE.css" media="none" id="highlight_theme_light" />
 
     <!-- Styles -->
     
-    <!-- <link rel="shortcut icon" href="/UrbanDVS_website/assets/img/mpl_icon.png"/> -->
-    <link rel="shortcut icon" href="https://arclab-hku.github.io/ecmd/assets/img/mpl_icon.png"/>
+    <link rel="shortcut icon" href="https://cpymaple.github.io/ecmd/assets/img/hku_logo.png"/>
     
-    <!-- <link rel="stylesheet" href="/UrbanDVS_website/assets/css/main.css"> -->
-    <link rel="stylesheet" href="https://arclab-hku.github.io/ecmd/assets/css/main.css">
+    <link rel="stylesheet" href="https://cpymaple.github.io/ecmd/assets/css/main.css">
     <link rel="canonical" href="http://localhost:4000/ecmd/">
+    <link rel="stylesheet" href="https://cpymaple.github.io/ecmd/assets/css/fonts.css">
+    <link rel="stylesheet" href="/ecmd/assets/css/fonts.css">
     
     <!-- Dark Mode -->
     
@@ -102,12 +105,12 @@
 
               <!-- Home -->
               <li class="nav-item active">
-                <a class="nav-link" href="/ECMD/">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/ecmd/">Home<span class="sr-only">(current)</span></a>
               </li>
 
               <!-- Other pages -->
-                <li class="nav-item dropdown ">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                <!-- <li class="nav-item dropdown ">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sensors</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/ECMD/about/sensor/">Sensor Suite</a>
                     <div class="dropdown-divider"></div>
@@ -115,24 +118,24 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/ECMD/about/ground_truth/">Ground Truth</a>
                   </div>
+                </li> -->
+                <li class="nav-item ">
+                  <a class="nav-link" href="/ecmd/sensors/">Sensors</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="/ECMD/calibration/">Calibration</a>
+                  <a class="nav-link" href="/ecmd/calibration/">Calibration</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="/ECMD/download/">Download</a>
+                  <a class="nav-link" href="/ecmd/download/">Download</a>
                 </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="/ECMD/competition/">Competition</a>
-                </li>
-                <li class="nav-item dropdown ">
+                <!-- <li class="nav-item dropdown ">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="https://github.com/mgaoling/mpl_calibration_toolbox/issues" target="_blank" rel="noopener noreferrer">Calibration Issue</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="https://github.com/mgaoling/mpl_dataset_toolbox/issues" target="_blank" rel="noopener noreferrer">Dataset Issue</a>
                   </div>
-                </li>
+                </li> -->
             </ul>
           </div>
         </div>
@@ -145,9 +148,9 @@
       <div class="post">
         <header class="post-header">
           <h1 class="post-title">
-           <span class="font-weight-bold">ECMD Benchmark</span>  
+           <span style="font-weight: 600;">The ECMD Datasets</span>  
           </h1>
-          <p class="desc">An Event-Centric Multisensory Dataset for Urban Driving Scenarios</p>
+          <p class="desc">An Event-Centric Multisensory Driving Dataset for SLAM</p>
         </header>
 
         <article>
@@ -156,16 +159,37 @@
           <div class="clearfix">
             <p><br></p>
 
-<p><img src="assets/img/overview.pdf" alt="sensor" style="max-width:98%;"></p>
+<figure style="text-align: center;">
+  <img style = "width: 70%" src="https://cpymaple.github.io/ecmd/assets/img/overview.png" alt="Image description">
+</figure>
 
 <p><br></p>
 
-<p>The first SLAM benchmark datasets which simultaneously satisfy the following requirements:</p>
+<p style="text-align: justify;">
+The first event-based SLAM datasets specifically focus on urbanized autonomou driving. 
+The contributions of our work can be summarized as follows:
+</p>
+
+
 
 <ul>
-  <li>Captured by a full <a href="/ECMD/about/synchronization">hardware-synchronized</a> <a href="/ECMD/about/sensor">sensor suite</a> that includes an event stereo camera, a regular stereo camera, an RGB-D sensor, a LiDAR, and an IMU;</li>
-  <li>Covering the <a href="/ECMD/download">full spectrum</a> of motion dynamics, environment complexities, and illumination conditions;</li>
-  <li>Complete six degrees of freedom <a href="/ECMD/about/ground_truth">ground truth signals</a> for both small and large-scale scenarios, and highly-accurate <a href="/ECMD/calibration">intrinsic and extrinsic calibration</a>.</li>
+  <li style="text-align: justify;"> A diverse <a href="/ecmd/sensors">sensor suite</a>, including two sets of stereo event cameras with 
+    distinct resolutions (640×480, 346×260), an infrared camera, stereo 
+    RGB cameras, three mechanical LiDAR (including two slanted LiDAR), an IMU, and three GNSS receivers.
+    A centimeter-level position system, GNSS-INS-RTK, is utilized as ground truth.  
+  </li>
+
+  <li style="text-align: justify;">
+    ALl sensors are <a href="/ecmd/calibration">well-calibrated</a> and temporally synchronized at the hardware level, with recording data simultaneously.
+  </li>
+  
+  <li style="text-align: justify;"> ECMD includes over *** kilometer trajectories covering various driving scenarios, including urban
+    congested areas, highways, bridges, tunnels, suburban, etc. These <a href="/ecmd/download">download</a> are recorded under both day and
+    night conditions, providing contrasting lighting conditions for identical scenes.
+  </li>
+  <li style="text-align: justify;"> We present a comprehensive <a href="/ecmd/benchmark">benchmark</a> that evaluates existing state-of-the-art SLAM algorithms of various
+    sensor modalities and analyzes their limitations.
+  </li>
 </ul>
 
 <p><br></p>
@@ -215,7 +239,7 @@
                 <tr>
                   <th scope="row">June 1, 2023</th>
                   <td>
-                    ECMD Benchmark goes live!
+                    ECMD Datasets goes live!
  
                   </td>
                 </tr> 
@@ -225,7 +249,7 @@
 
           <!-- Selected papers -->
           <div class="publications">
-            <h2>Citation</h2>
+            <h2>BibTeX</h2>
             Please cite the following publication when using this benchmark in an academic context:
             <h2></h2>
             <ol class="bibliography"><li>
@@ -239,7 +263,7 @@
         <div id="ecmd2023" class="col-sm-8">
         
           <!-- Title -->
-          <div class="title">ECMD: An Event-Centric Multisensory Dricing Dataset for SLAM</div>
+          <div class="title">ECMD: An Event-Centric Multisensory Driving Dataset for SLAM</div>
           <!-- Author -->
           <div class="author">P. Chen, W. Guan, F. Huang, Y. Zhong, W. Wen, L. Hsu, and P. Lu
           </div>
@@ -253,14 +277,14 @@
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
             <a href="XXXXXX" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">arXiv</a>
-            <a href="/ECMD/assets/pdf/ECMD.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
-            <a href="/ECMD/assets/pdf/supplementary_material.pdf" class="btn btn-sm z-depth-0" role="button">Supp</a>
+            <a href="/ecmd/assets/pdf/ECMD.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="/ecmd/assets/pdf/supplementary_material.pdf" class="btn btn-sm z-depth-0" role="button">Supp</a>
             <!-- 以上三个内容依次放，arxiv网址，我们论文的pdf，如果有补充材料就加，没有就不加 -->
           </div>
 
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
-            <p>
+            <p style="text-align: justify;">
               Leveraging multiple sensors enhances complex environmental perception and increases resilience to varying luminance conditions and high-speed motion patterns, achieving precise localization and mapping. 
               This paper presents, UrbanDVS, an event-centric multisensory dataset comprising xx sequences and covering xx km of urban driving scenarios. 
               UrbanDVS provides data from two sets of stereo event cameras with different resolutions (640x480, 346x260), stereo RGB cameras, an infrared camera, a top-installed mechanical LiDAR with two slanted LiDAR, three consumer-level GNSS receivers, and a highly accurate IMU. 
@@ -279,7 +303,10 @@
           <!-- License -->
           <div class="License">
             <h2>License</h2>
-            This datasets, along with documentation and toolbox, are released under the <a href="https://spdx.org/licenses/BSD-3-Clause-Clear.html" target="_blank" rel="noopener noreferrer">BSD 3-Clause Clear License</a>.
+            <p>
+            This work is released under <a href="https://www.gnu.org/licenses/" target="_blank" rel="noopener noreferrer">GPLv3</a> license. 
+            For commercial inquires, please contact Dr. Peng Lu (lupeng@hku.hk).
+            </p>
           </div>
           <br>
           <br>
@@ -287,38 +314,26 @@
           <!-- Acknowledgements -->
           <div class="Acknowledgement">
             <h2>Acknowledgement</h2>
-            This work was supported by General Research Fund under Grant 17204222, and in part by the Seed Fund for Collaborative Research and General Funding Scheme-HKU-TCL Joint Research Center for Artificial Intelligence.
-            <!-- <a href="https://www.stereye.com/en/" target="_blank" rel="noopener noreferrer">Stereye Intelligent Technology</a>. -->
+            <p style="text-align: justify;">
+              This work was supported by General Research Fund under Grant 17204222, and in part by the Seed Fund for Collaborative Research and General Funding Scheme-HKU-TCL Joint Research Center for Artificial Intelligence.
+            </p>
           </div>
           <br>
           <br>
 
-          <!-- Social -->
-          <div class="social">
-            <div class="contact-icons">
-            <a href="https://star-datasets.github.io/" title="STAR Datasets" target="_blank" rel="noopener noreferrer"><i class="fas fa-home"></i></a> <!-- fab fa-blogger-b -->
-            <a href="https://mpl.sist.shanghaitech.edu.cn/" title="Mobile Perception Lab" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a> <!-- fa-briefcase -->
-            <a href="mailto:gaoling@shanghaitech.edu.cn" title="E-mail"><i class="fas fa-envelope"></i></a>
-            
-            </div>
-
-            <div class="contact-note">
-              
-            </div>
-            
-          </div>
         </article>
 
 </div>
 
     </div>
 
-    <!-- Footer -->    
-    <footer class="fixed-bottom">
-      <div class="container mt-0" style="width:100%;text-align:center;">
-        © 2022 Mobile Perception Lab, ShanghaiTech University, China. All rights reserved.
-      </div>
-    </footer>
+   <!-- Footer -->    
+  <footer class="nofixed-bottom">
+    <div class="container mt-0" style="width:100%;text-align:center;">
+      © 2023 Adaptive Robotics Controls Lab (Arclab), The University of HongKong. All rights reserved.
+    </div>
+  </footer> 
+
 
     <!-- JavaScripts -->
     <!-- jQuery -->
@@ -350,7 +365,6 @@
   <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
   <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    
   </body>
 </html>
 
