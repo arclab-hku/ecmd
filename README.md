@@ -1,4 +1,4 @@
-Website for the ecmd datasets.
+Website for the ECMD datasets.
 
 Webpage: https://arclab-hku.github.io/ecmd/
 
