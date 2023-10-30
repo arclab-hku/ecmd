@@ -173,23 +173,31 @@ The contributions of our work can be summarized as follows:
 
 
 <ul>
-  <li style="text-align: justify;"> A diverse <a href="/ecmd/sensors">sensor suite</a>, including two sets of stereo event cameras with 
-    distinct resolutions (640×480, 346×260), an infrared camera, stereo 
-    RGB cameras, three mechanical LiDAR (including two slanted LiDAR), an IMU, and three GNSS receivers.
-    A centimeter-level position system, GNSS-INS-RTK, is utilized as ground truth.  
+  <li style="text-align: justify;"> Our <a href="/ecmd/sensors">sensor platform</a> consists of various novel sensors, 
+    including two sets of stereo event cameras with distinct resolutions (640×480, 346×260),
+    an infrared camera, 
+    stereo industrial cameras, 
+    three mechanical LiDARs (including two slanted LiDARs), 
+    a high-quality inertial measurement unit (IMU), 
+    and three global navigation satellite system (GNSS) receivers.
+    For the ground-truth, we adopt a centimeter-level position system that combines the GNSS real-time kinematic (RTK)
+    with the fiber optics gyroscope integrated inertial system as GNSS-RTK/INS. 
   </li>
 
-  <li style="text-align: justify;">
+  <!-- <li style="text-align: justify;">
     ALl sensors are <a href="/ecmd/calibration">well-calibrated</a> and temporally synchronized at the hardware level, with recording data simultaneously.
-  </li>
+  </li> -->
   
-  <li style="text-align: justify;"> ECMD includes over *** kilometer trajectories covering various driving scenarios, including urban
-    congested areas, highways, bridges, tunnels, suburban, etc. These <a href="/ecmd/download">download</a> are recorded under both day and
-    night conditions, providing contrasting lighting conditions for identical scenes.
+  <li style="text-align: justify;"> ECMD collects 81 sequences covering over 200 kilometers of trajectories in various driving scenarios, 
+    including dense streets, urban, tunnels, highways, bridges, and suburbs.
+    These <a href="/ecmd/download">sequences</a> are recorded under daylight and nighttime, providing challenging situations for Visual and LiDAR SLAM, e.g., 
+    dynamic objects, high-speed motion, repetitive scenarios, and HDR scenes.
+    Meanwhile, we evaluate existing state-of-the-art visual and LiDAR SLAM algorithms with various sensor modalities on our datasets.
+    Moreover, our dataset and benchmark results are released publicly available on our website.
   </li>
-  <li style="text-align: justify;"> We present a comprehensive <a href="/ecmd/benchmark">benchmark</a> that evaluates existing state-of-the-art SLAM algorithms of various
+  <!-- <li style="text-align: justify;"> We present a comprehensive <a href="/ecmd/benchmark">benchmark</a> that evaluates existing state-of-the-art SLAM algorithms of various
     sensor modalities and analyzes their limitations.
-  </li>
+  </li> -->
 </ul>
 
 <p><br></p>
@@ -285,13 +293,14 @@ The contributions of our work can be summarized as follows:
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
             <p style="text-align: justify;">
-              Leveraging multiple sensors enhances complex environmental perception and increases resilience to varying luminance conditions and high-speed motion patterns, achieving precise localization and mapping. 
-              This paper presents, UrbanDVS, an event-centric multisensory dataset comprising xx sequences and covering xx km of urban driving scenarios. 
-              UrbanDVS provides data from two sets of stereo event cameras with different resolutions (640x480, 346x260), stereo RGB cameras, an infrared camera, a top-installed mechanical LiDAR with two slanted LiDAR, three consumer-level GNSS receivers, and a highly accurate IMU. 
-              Meanwhile, we utilize a centimeter-level positioning system, GNSS-INS-RTK navigation system, to attain accurate ground truth of the vehicle. 
+              Leveraging multiple sensors enhances complex environmental perception and increases resilience to varying luminance conditions and high-speed motion patterns, achieving precise localization and mapping.
+              This paper proposes, ECMD, an event-centric multisensory dataset containing 81 sequences and covering over 200 km of various challenging driving scenarios including high-speed motion, repetitive scenarios, dynamic objects, etc.
+              ECMD provides data from two sets of stereo event cameras with different resolutions (640$\times$480, 346$\times$260), stereo industrial cameras, an infrared camera, a top-installed mechanical LiDAR with two slanted LiDARs, 
+              two consumer-level GNSS receivers, and an onboard IMU.
+              Meanwhile, the ground-truth of the vehicle was obtained using a centimeter-level high-accuracy GNSS-RTK/INS navigation system.
               All sensors are well-calibrated and temporally synchronized at the hardware level, with recording data simultaneously.
-              We additionally evaluated several state-of-the-art SLAM approaches for benchmarking visual and LiDAR-based SLAM and identifying their limitations.
-              To benefit the research community, we have made the dataset and associated tools all publicly available.
+              We additionally evaluate several state-of-the-art SLAM algorithms for benchmarking visual and LiDAR SLAM and identifying their limitations.
+              <!-- The full dataset can be found at \url{https://arclab-hku.github.io/ecmd/}. -->
             </p>
           </div>
         </div>
