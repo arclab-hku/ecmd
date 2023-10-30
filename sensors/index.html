@@ -138,35 +138,51 @@
           <article>
             <p><br></p>
 
-          <figure style="text-align: center;">
+          <!-- <figure style="text-align: center;">
              <img style = "width: 90%" src="https://arclab-hku.github.io/ecmd/assets/img/sensors.JPG" alt="Image description">
+          </figure> -->
+
+          <figure style="text-align: center;">
+            <img style = "width: 70%" src="https://arclab-hku.github.io/ecmd/assets/img/overview.png" alt="Image description">
+            <figcaption id="overview">Fig. 1. An overview of the sensor setup and dataset visualization</figcaption>
           </figure>
 
 <p><br></p>
 
 <p style="text-align: justify;">
-Our sensor suite comprises a multi-camera setup including event camera, RGB camera, and infrared camera, and equipped with three LiDARs, high-quality IMU, three GNSS receivers, and GNSS-INS-RTK systems.
-<br>
-</p>
-<p style="text-align: justify;">
-Two sets of stereo event cameras with different resolutions, DAVIS436 (346&times;260) and DVXplorer (640&times;480), are configured at a baseline of 30 cm respectively.
-DAVIS346 produces asynchronous events and intensity frames. 
-In contrast, DVXplorer exclusively generates events; nonetheless, its resolution surpasses that of DAVIS346, enabling the provision of more intricate scene information.
-To achieve time synchronization between different event cameras, the DAVIS346 on the rightmost side is configured as the master device and transmits trigger signal pulses to the remaining slave event cameras sequentially from left to right via external cables.
-Each camera is equipped with additional IR filters to mitigate interference from LiDAR.
-Two FLIR BFLY-U3-23S3C RGB cameras with a resolution of 1920&times;1200 are used to capture image frames at 20 Hz in fixed exposure mode.
-Forward-facing stereo RGB cameras are installed with a baseline of 30 cm, ensuring fairness by maintaining consistency with the baseline of the stereo event cameras.
-Hikrobot MV-CI003-GL-N6 infrared camera collects thermal frames at 20 Hz, encompassing a response band of 8-14&mu;m and equipped with a 6.3mm focal length lens.
+  The data collection platform is shown in <a href="#overview">Fig. 1.</a>. Our sensor suite consists of a multi-camera setup (event camera, industrial camera, 
+  and infrared camera) equipped with three LiDARs, high-quality IMU, three GNSS receivers, and GNSS-RTK/INS systems.
+  The specific specifications of each sensor are presented in <a href="#Sensors specifications">Table. 1.</a> .
+  An Intel NUC (i7-1260P, 32GB RAM) and an industrial computer (i7-10610U, 32GB RAM) are used to run sensor drivers, and record data into ROS bags on the Ubuntu system.
 <br>
 </p>
 
+<h4>Visual sensors</h4>
 <p style="text-align: justify;">
-We configure three mechanical LiDAR sensors including two slanted LiDAR sensors to collect accurate point clouds of surrounding environments.
-Velodyne HDL-32E is positioned on the top of the vehicle to capture the surroundings horizontally.
-Two slanted LiDAR sensors, Lslidar C16 and Velodyne VLP-16, are mounted on the left and right sides of the sensor kit, respectively.
-This configuration facilitates the thorough recording of architectural particulars relevant to high-rising buildings in urbanized areas and all LiDAR data are collected at 10 Hz.
-A tactical-level Xsens-MTI-30 IMU is employed to collect the raw acceleration and angular velocity at 400 Hz.
-The accurate ground truth of localization is furnished by a centimeter-level GNSS-INS-RTK navigation system.
+  Two sets of stereo event cameras with different resolutions, DAVIS436 (346&times;260) and DVXplorer (640&times;480), are configured at a baseline of 30 cm respectively.
+  DAVIS346 produces asynchronous events and intensity frames. 
+  In contrast, DVXplorer exclusively generates events, while its resolution surpasses that of DAVIS346, enabling the provision of more intricate scene information.
+  Each event camera is equipped with additional infrared filters to mitigate interference from LiDAR.
+  Two FLIR BFLY-U3-23S3C industrial cameras with a resolution of 1920&times;1200 are used to capture RGB images at 20 Hz in fixed exposure mode.
+  Forward-facing stereo industrial cameras are installed with a baseline of 30 cm, ensuring fairness by maintaining consistency with the baseline of the stereo event cameras.
+  Hikrobot MV-CI003-GL-N6 infrared camera collects thermal frames at 20 Hz, encompassing a response band of 8-14&mu;m and equipped with a 6.3mm focal length lens.
+<br>
+</p>
+
+<h4>Mechanical LiDAR</h4>
+<p style="text-align: justify;">
+  We configure three mechanical LiDARs including two slanted LiDARs to collect accurate point clouds of surrounding environments.
+  Velodyne HDL-32E is positioned on the top of the vehicle to capture the surroundings horizontally.
+  Two slanted LiDARs, Lslidar C16 and Velodyne VLP-16, are mounted on the left and right sides of the sensor kit, respectively.
+  This configuration facilitates the thorough recording of architectural particulars relevant to high-rising buildings in urbanized 
+  areas and all LiDAR data are collected at 10 Hz.
+<br>
+</p>
+
+<h4>GNSS-RTK/INS</h4>
+<p style="text-align: justify;">
+  A tactical-level Xsens-MTI-30 IMU is employed to collect the raw acceleration and angular velocity at 400 Hz.
+  The accurate ground-truth of localization is furnished by a centimeter-level GNSS-RTK/INS navigation system.
 <br>
 </p>
 
@@ -176,6 +192,7 @@ The details of full sensors setup can be found below:
 </p>
 
 <table>
+  <tablecaption id="Sensors specifications"></tablecaption>
   <tr><td>Sensor Type</td><td>Description</td></tr>
   <tr>
   <td>Inivation DAVIS346 Color &times; 2</td>
