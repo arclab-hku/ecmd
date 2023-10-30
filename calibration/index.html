@@ -143,15 +143,16 @@
     <!-- 放一张类似于VECtor calibration的图片, 主要是表现各个传感器的相互关联图-->
  <!-- </figure> -->
 
+<picture style="text-align: center;">
+  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/gif/calibration.gif" title="calibration">
+</picture>
+
+<p><br></p>
+
+
  <div class="row">
   <div class="col-sm mt-3 mt-md-0">
       <figure>
-
-        <picture style="text-align: center;">
-          <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/gif/calibration.gif" title="calibration">
-        </picture>
-
-        <p><br></p>
 
 <picture>
 
@@ -231,8 +232,14 @@ More details of the calibration sequence, platform layout, and reports of calibr
 
 <p style="text-align: justify;">
   For industrial cameras, we move the sensor platform against the 9&times;7 checkerboard in the XYZ-axis and collect the sequence of RGB images and IMU.
-  Then intrinsics calibration of industrial cameras is achieved by Kalibr toolbox, where the pinhole and radial-tangential camera models are adopted. 
+  Then intrinsics calibration of industrial cameras is achieved by Kalibr toolbox, where the pinhole and radial-tangential camera models are adopted.
+  The results of intrinsics calibration are shown in <a href="#Intrinsics calibration of industrial cameras">Fig. 1.</a>. 
 </p>
+
+<figure style="text-align: center;">
+  <img style = "width: 70%" src="https://arclab-hku.github.io/ecmd/assets/img/overview.png" alt="Image description">
+  <figcaption id="Intrinsics calibration of industrial cameras">Fig. 1. Intrinsics calibration of industrial cameras</figcaption>
+</figure>
 
 <p><br></p>
 
@@ -242,18 +249,18 @@ More details of the calibration sequence, platform layout, and reports of calibr
 
 <p style="text-align: justify;">
   For event cameras, DAVIS346 can produce fixed-rated frames, enabling image-based calibration, while DVXplorer merely produces asynchronous event streams.
-  Therefore, E2Calib is used to achieve image reconstruction from event streams(see <a href="#Event streams of checkerboard">Fig. 1.</a>).
-  With the reconstructed checkerboard images in <a href="#Reconstructed image of checkerboard">Fig. 2.</a>, the intrinsics of event cameras could also be calibrated by Kalibr.
+  Therefore, E2Calib is used to achieve image reconstruction from event streams(see <a href="#Event streams of checkerboard">Fig. 2.</a>).
+  With the reconstructed checkerboard images in <a href="#Reconstructed image of checkerboard">Fig. 3.</a>, the intrinsics of event cameras could also be calibrated by Kalibr.
 </p>
 
 <div style="display: flex; justify-content: space-between;">
   <figure>
     <img src="https://arclab-hku.github.io/ecmd/assets/img/Event_streams_of_checkerboard.png" alt="Image 1" style="width: 100%; max-width: 100%;">
-    <figcaption id="Event streams of checkerboard">Fig. 1. Event streams of checkerboard</figcaption>
+    <figcaption id="Event streams of checkerboard">Fig. 2. Event streams of checkerboard</figcaption>
   </figure>
   <figure>
     <img src="https://arclab-hku.github.io/ecmd/assets/img/Reconstructed_image_of_checkerboard.png" alt="Image 2" style="width: 100%; max-width: 100%;">
-    <figcaption id="Reconstructed image of checkerboard">Fig. 2. Reconstructed image of checkerboard</figcaption>
+    <figcaption id="Reconstructed image of checkerboard">Fig. 3. Reconstructed image of checkerboard</figcaption>
   </figure>
 </div>
 
@@ -266,52 +273,50 @@ More details of the calibration sequence, platform layout, and reports of calibr
 <p style="text-align: justify;">
   Due to infrared cameras solely capturing the temperature rather than the intensity difference, we design a distinct 9&times;7 checkerboard to 
   make the pattern detectable for infrared cameras. 
-  As shown in <a href="#PCB checkerboard">Fig. 3.</a>, the checkerboard intervals are affixed with aluminum materials, and then using a heating plate 
+  As shown in <a href="#PCB checkerboard">Fig. 4.</a>, the checkerboard intervals are affixed with aluminum materials, and then using a heating plate 
   to raise the temperature of the checkerboard.
   Since the superior thermal dissipation of aluminum compared to plastic, a temperature contrast emerges between the two materials, enabling infrared 
-  cameras to distinctly capture the lattice shape of the checkerboard, as in <a href="#Infrared image of heated checkerboard">Fig. 4.</a>.
+  cameras to distinctly capture the lattice shape of the checkerboard, as in <a href="#Infrared image of heated checkerboard">Fig. 5.</a>.
   With the special infrared image of the checkerboard, intrinsic can be calibrated by Kalibr.
 </p>
 
-<!-- <div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: space-between;">
   <figure>
     <img src="https://arclab-hku.github.io/ecmd/assets/img/infrared_calibration.JPG" alt="Image 1" style="width: 100%; max-width: 100%;">
-    <figcaption id="PCB checkerboard">Fig. 3. PCB checkerboard</figcaption>
+    <figcaption id="PCB checkerboard">Fig. 4. PCB checkerboard</figcaption>
   </figure>
   <figure>
     <img src="https://arclab-hku.github.io/ecmd/assets/img/infrared_image.png" alt="Image 2" style="width: 100%; max-width: 100%;">
-    <figcaption id="Infrared image of heated checkerboard">Fig. 4. Infrared image of heated checkerboard</figcaption>
+    <figcaption id="Infrared image of heated checkerboard">Fig. 5. Infrared image of heated checkerboard</figcaption>
   </figure>
-</div> -->
-
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-      <figure>
-
-<picture>
-
-  <!-- Fallback to the original file -->
-  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/infrared_calibration.JPG" title="sensors1">
-  <figcaption id="PCB checkerboard">Fig. 3. PCB checkerboard</figcaption>
-</picture>
-
-</figure>
-
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-      <figure>
-
-<picture>
-
-  <!-- Fallback to the original file -->
-  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/infrared_image.png" title="sensors2">
-  <figcaption id="Infrared image of heated checkerboard">Fig. 4. Infrared image of heated checkerboard</figcaption>
-</picture>
-
-</figure>
-
-  </div>
 </div>
+
+<!-- <div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+      <figure>
+
+<picture>
+
+  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/infrared_calibration.JPG" title="sensors1">
+  <figcaption id="PCB checkerboard">Fig. 4. PCB checkerboard</figcaption>
+</picture>
+
+</figure>
+
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+      <figure>
+
+<picture>
+
+  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/infrared_image.png" title="sensors2">
+  <figcaption id="Infrared image of heated checkerboard">Fig. 5. Infrared image of heated checkerboard</figcaption>
+</picture>
+
+</figure>
+
+  </div>
+</div> -->
 
 <p><br></p>
 
@@ -337,10 +342,10 @@ More details of the calibration sequence, platform layout, and reports of calibr
   transformation between LiDAR and IMU.
 </p>
 
-<div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: space-between;text-align: center;">
   <figure>
-    <img src="https://arclab-hku.github.io/ecmd/assets/img/lidar_calibration.png" alt="Image 1" style="width: 100%; max-width: 100%;">
-    <figcaption id="lidar_calibration">Fig. 5. Calibration between LiDAR and IMU</figcaption>
+    <img src="https://arclab-hku.github.io/ecmd/assets/img/lidar_calibration.png" alt="Image 1" style="width: 70%; max-width: 70%;">
+    <figcaption id="lidar_calibration">Fig. 6. Calibration between LiDAR and IMU</figcaption>
   </figure>
 </div>
 
