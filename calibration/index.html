@@ -150,7 +150,7 @@
 <picture>
 
   <!-- Fallback to the original file -->
-  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/calibration.JPG" title="calibration">
+  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/sensors1.png" title="sensors1">
 
 </picture>
 
@@ -163,7 +163,7 @@
 <picture>
 
   <!-- Fallback to the original file -->
-  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/infrared_calibration.JPG" title="infrared_calibration">
+  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/sensors2.png" title="sensors2">
 
 </picture>
 
@@ -187,9 +187,12 @@
 <p><br></p>
 
 <p style="text-align: justify;">
-We use a Precision Time Protocol (PTP) device to synchronize the clocks of various data collection devices across the sensor network. The PTP ensures time accuracy within nanoseconds. 
-The synchronization device acquires the NMEA output and pulse-per-second (PPS) signal from a u-blox M8T GNSS receiver to align the ROS time of the onboard computers with the GPS time. 
-This enables sensors such as cameras, LIDAR and IMU to record timestamps based on the synchronized GPS time.
+  We use a Precision Time Protocol (PTP) device to synchronize the clocks of various data collection devices across the sensor network. 
+  The PTP ensures time accuracy within nanoseconds. 
+  The synchronization device acquires the NMEA output and pulse-per-second (PPS) signal from a u-blox M8T GNSS receiver to align the ROS time of the onboard computers 
+  with the GPS time. This enables sensors such as cameras, LiDAR, and IMU to record timestamps based on the synchronized GPS time. 
+  Moreover, to achieve time synchronization between different event cameras, the DAVIS346 on the rightmost side is configured as the master device and 
+  transmits trigger signal pulses to the remaining slave event cameras sequentially from left to right via external cables.
 </p>
 
 <p><br></p>
@@ -198,14 +201,14 @@ This enables sensors such as cameras, LIDAR and IMU to record timestamps based o
 
 <p><br></p>
 
-<p style="text-align: justify;">
+<!-- <p style="text-align: justify;">
 For sensor calibration, we first define the coordinate of Xsens Mti-30 as the body frame. Then we meticulously calibrate the intrinsics of each sensor with the extrinsics between the external IMU and the rest sensors.  
 More details of the calibration sequence, platform layout, and reports of calibration can be found on our website.
-</p>
+</p> -->
 
 <p><br></p>
 
-<h4>2.1. Calibration of Inertial Measurement Unit</h4>
+<h4>2.1. IMU Calibration</h4>
 
 <p><br></p>
 
@@ -216,27 +219,37 @@ More details of the calibration sequence, platform layout, and reports of calibr
 
 <p><br></p>
 
-<h4>2.2. Calibration of Standard Cameras</h4>
+<h4>2.2. Industrial Cameras Calibration</h4>
 
 <p><br></p>
 
 <p style="text-align: justify;">
-  For the calibration of standard cameras, we move the sensor platform against the 9&times;7 checkerboard in XYZ-RPY-axis and collect the sequence of images and IMU.
-  Then intrinsics and extrinsics calibration of standard cameras are achieved by Kalibr toolbox, where the pinhole and radial-tangential camera models are adopted. 
-  The results of calibration are shown in Fig. x.
+  For industrial cameras, we move the sensor platform against the 9&times;7 checkerboard in the XYZ-axis and collect the sequence of RGB images and IMU.
+  Then intrinsics calibration of industrial cameras is achieved by Kalibr toolbox, where the pinhole and radial-tangential camera models are adopted. 
 </p>
 
 <p><br></p>
 
-<h4>2.3. Calibration of Event Cameras</h4>
+<h4>2.3. Event Cameras Calibration</h4>
 
 <p><br></p>
 
 <p style="text-align: justify;">
-  For the calibration of event cameras, DAVIS346 can produce fix-rated frames, enabling image-based calibration, while DVXplorer merely produces asynchronous event streams.
-  Therefore, E2VID is used to achieve image reconstruction from event streams.
-  Using the reconstructed checkerboard images, the intrinsics and extrinsics of event cameras can be calibrated following the same procedure as standard cameras.
+  For event cameras, DAVIS346 can produce fixed-rated frames, enabling image-based calibration, while DVXplorer merely produces asynchronous event streams.
+  Therefore, E2Calib is used to achieve image reconstruction from event streams(see <a href="#Event streams of checkerboard">Fig. 1.</a>).
+  With the reconstructed checkerboard images in <a href="#Reconstructed image of checkerboard">Fig. 2.</a>, the intrinsics of event cameras could also be calibrated by Kalibr.
 </p>
+
+<div style="display: flex; justify-content: space-between;">
+  <figure>
+    <img src="https://arclab-hku.github.io/ecmd/assets/img/Event_streams_of_checkerboard.png" alt="Image 1" style="width: 100%; max-width: 100%;">
+    <figcaption id="Event streams of checkerboard">Fig. 1. Event streams of checkerboard</figcaption>
+  </figure>
+  <figure>
+    <img src="https://arclab-hku.github.io/ecmd/assets/img/Reconstructed_image_of_checkerboard.png" alt="Image 2" style="width: 100%; max-width: 100%;">
+    <figcaption id="Reconstructed image of checkerboard">Fig. 2. Reconstructed image of checkerboard</figcaption>
+  </figure>
+</div>
 
 <p><br></p>
 
@@ -245,23 +258,56 @@ More details of the calibration sequence, platform layout, and reports of calibr
 <p><br></p>
 
 <p style="text-align: justify;">
-  Since infrared cameras solely capture the temperature rather than the intensity difference, we design a distinct checkerboard to make the pattern detectable for both intensity and infrared cameras. 
-  As shown in Fig. x, the checkerboard intervals are affixed with aluminum materials, then using a heating plate to raise the temperature of the calibration board.
-  Since the superior thermal dissipation of aluminum compared to plastic, a temperature contrast emerges between the two materials, enabling infrared cameras to distinctly capture the lattice shape of the checkerboard.
-  With the same approach as standard cameras, the calibration of intrinsics and extrinsics of infrared cameras can be achieved.
+  Due to infrared cameras solely capturing the temperature rather than the intensity difference, we design a distinct 9&times;7 checkerboard to 
+  make the pattern detectable for infrared cameras. 
+  As shown in <a href="#PCB checkerboard">Fig. 3.</a>, the checkerboard intervals are affixed with aluminum materials, and then using a heating plate 
+  to raise the temperature of the checkerboard.
+  Since the superior thermal dissipation of aluminum compared to plastic, a temperature contrast emerges between the two materials, enabling infrared 
+  cameras to distinctly capture the lattice shape of the checkerboard, as in <a href="#Infrared image of heated checkerboard">Fig. 4.</a>.
+  With the special infrared image of the checkerboard, intrinsic can be calibrated by Kalibr.
 </p>
+
+<div style="display: flex; justify-content: space-between;">
+  <figure>
+    <img src="https://arclab-hku.github.io/ecmd/assets/img/infrared_calibration.JPG" alt="Image 1" style="width: 100%; max-width: 100%;">
+    <figcaption id="PCB checkerboard">Fig. 3. PCB checkerboard</figcaption>
+  </figure>
+  <figure>
+    <img src="https://arclab-hku.github.io/ecmd/assets/img/infrared_image.png" alt="Image 2" style="width: 100%; max-width: 100%;">
+    <figcaption id="Infrared image of heated checkerboard">Fig. 4. Infrared image of heated checkerboard</figcaption>
+  </figure>
+</div>
 
 <p><br></p>
 
-<h4>2.5. Calibration of mechanical LiDAR</h4>
+<h4>2.5. Calibration between Camera and IMU</h4>
 
 <p><br></p>
 
 <p style="text-align: justify;">
-  Precise temporal offset and extrinsics between LiDAR and IMU are crucial to LiDAR-Inertial Odometry. 
-  For the calibration of mechanical LiDAR, LI-Init is capable of achieving temporal and spatial calibration for LiDAR and IMU without checkerboards or extra devices. 
-  We rotate and move the device around XYZ-axis to ensure sufficient excitation until the data accumulation is completed, thus we acquire the extrinsic transformation between LiDAR and IMU.
+  After completing intrinsic calibration, we move the sensor suite in front of checkerboards along the XYZ-RPY-axis and collect data simultaneously.
+  Subsequently, the extrinsic and the temporal offset between all cameras and IMU could be estimated using Kalibr. 
 </p>
+
+<p><br></p>
+
+<h4>2.6. Calibration between LiDAR and IMU</h4>
+
+<p><br></p>
+
+<p style="text-align: justify;">
+  For the calibration of mechanical LiDAR, LI-Init is capable of achieving temporal and spatial calibration for LiDAR and IMU without checkerboards 
+  or extra devices in <a href="#lidar_calibration">Fig. 5.</a>. 
+  We rotate and move the device around the XYZ-axis to ensure sufficient excitation until the data accumulation is completed, thus we acquire the extrinsic 
+  transformation between LiDAR and IMU.
+</p>
+
+<div style="display: flex; justify-content: space-between;">
+  <figure>
+    <img src="https://arclab-hku.github.io/ecmd/assets/img/lidar_calibration.png" alt="Image 1" style="width: 100%; max-width: 100%;">
+    <figcaption id="lidar_calibration">Fig. 5. Calibration between LiDAR and IMU</figcaption>
+  </figure>
+</div>
 
 <p><br></p>
 
