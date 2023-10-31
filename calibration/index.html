@@ -171,7 +171,7 @@
 </p>
 
 <figure style="text-align: center;">
-  <img style = "width: 70%" src="https://arclab-hku.github.io/ecmd/assets/img/structure_of_syns.png" alt="Image description">
+  <img style = "width: 100%" src="https://arclab-hku.github.io/ecmd/assets/img/structure_of_syns.png" alt="Image description">
   <figcaption id="overview">Fig. 1. The Structure of Our Sensors Synchronization</figcaption>
 </figure>
 
@@ -189,7 +189,7 @@
 
 
 
-<div style="display: flex; justify-content: space-between;">
+<!-- <div style="display: flex; justify-content: space-between;">
   <figure>
     <img src="https://arclab-hku.github.io/ecmd/assets/img/syns_connectors.png" alt="Image 1" style="width: 100%; max-width: 100%;">
     <figcaption id="syns_connectors">Fig. 1. Sync connector pinouts on DAVIS 346</figcaption>
@@ -198,6 +198,35 @@
     <img src="https://arclab-hku.github.io/ecmd/assets/img/four_event_camera.jpg" alt="Image 2" style="width: 100%; max-width: 100%;">
     <figcaption id="four_event_camera">Fig. 2. Four event cameras are connect via external cables</figcaption>
   </figure>
+</div> -->
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+      <figure>
+
+<picture>
+
+  <!-- Fallback to the original file -->
+  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/syns_connectors.png" title="syns_connectors">
+  <figcaption id="syns_connectors">Fig. 2. Sync connector pinouts on DAVIS 346</figcaption>
+</picture>
+
+</figure>
+
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+      <figure>
+
+<picture>
+
+  <!-- Fallback to the original file -->
+  <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/four_event_camera.jpg" title="four_event_camera">
+  <figcaption id="four_event_camera">Fig. 3. Four event cameras are connect via external cables</figcaption>
+</picture>
+
+</figure>
+
+  </div>
 </div>
 
 <p style="text-align: justify;">
@@ -249,7 +278,7 @@ A list of other cameras connected with synchronization cable to this camera, If 
 <figure style="text-align: center;">
   <img style="width: 48%;" src="https://arclab-hku.github.io/ecmd/assets/img/event_camera_synchronization.jpg" alt="Image description">
   <img style="width: 48%;" src="https://arclab-hku.github.io/ecmd/assets/img/image_synchronization.jpg" alt="Image description">
-  <figcaption>Fig. 5. Synchronization Testing between the Event Camera (left) and the Standard Camera (right) </figcaption>
+  <figcaption>Fig. 4. Synchronization Testing between the Event Camera (left) and the Standard Camera (right) </figcaption>
 </figure>
 
 <p style="text-align: justify;">
@@ -265,7 +294,7 @@ A list of other cameras connected with synchronization cable to this camera, If 
     <img style="width: 48%;" src="https://arclab-hku.github.io/ecmd/assets/img/event_camera_synchronization.jpg" alt="Image description">
     <img style="width: 48%;" src="https://arclab-hku.github.io/ecmd/assets/img/event_camera_synchronization.jpg" alt="Image description">
     <img style="width: 48%;" src="https://arclab-hku.github.io/ecmd/assets/img/event_camera_synchronization.jpg" alt="Image description"> -->
-    <figcaption>Fig. 6. Synchronization Testing between the Event and Image from DAVIS346 </figcaption>
+    <figcaption>Fig. 5. Synchronization Testing between the Event and Image from DAVIS346 </figcaption>
   </figure>
 
 <br>
@@ -307,8 +336,6 @@ A list of other cameras connected with synchronization cable to this camera, If 
   </div>
 </div>
 
-<p><br></p>
-
 <!-- <p style="text-align: justify;">
 For sensor calibration, we first define the coordinate of Xsens Mti-30 as the body frame. Then we meticulously calibrate the intrinsics of each sensor with the extrinsics between the external IMU and the rest sensors.  
 More details of the calibration sequence, platform layout, and reports of calibration can be found on our website.
@@ -334,12 +361,12 @@ More details of the calibration sequence, platform layout, and reports of calibr
 <p style="text-align: justify;">
   For industrial cameras, we move the sensor platform against the 9&times;7 checkerboard in the XYZ-axis and collect the sequence of RGB images and IMU.
   Then intrinsics calibration of industrial cameras is achieved by Kalibr toolbox, where the pinhole and radial-tangential camera models are adopted.
-  The results of intrinsics calibration are shown in <a href="#Intrinsics calibration of industrial cameras">Fig. 1.</a>. 
+  The results of intrinsics calibration are shown in <a href="#Intrinsics calibration of industrial cameras">Fig. 6.</a>. 
 </p>
 
 <figure style="text-align: center;">
   <img style = "width: 70%" src="https://arclab-hku.github.io/ecmd/assets/img/calibration_results.png" alt="Image description">
-  <figcaption id="Intrinsics calibration of industrial cameras">Fig. 1. Intrinsics calibration of industrial cameras</figcaption>
+  <figcaption id="Intrinsics calibration of industrial cameras">Fig. 6. Intrinsics calibration of industrial cameras</figcaption>
 </figure>
 
 <p><br></p>
@@ -350,18 +377,18 @@ More details of the calibration sequence, platform layout, and reports of calibr
 
 <p style="text-align: justify;">
   For event cameras, DAVIS346 can produce fixed-rated frames, enabling image-based calibration, while DVXplorer merely produces asynchronous event streams.
-  Therefore, E2Calib is used to achieve image reconstruction from event streams(see <a href="#Event streams of checkerboard">Fig. 2.</a>).
-  With the reconstructed checkerboard images in <a href="#Reconstructed image of checkerboard">Fig. 3.</a>, the intrinsics of event cameras could also be calibrated by Kalibr.
+  Therefore, E2Calib is used to achieve image reconstruction from event streams(see <a href="#Event streams of checkerboard">Fig. 7.</a>).
+  With the reconstructed checkerboard images in <a href="#Reconstructed image of checkerboard">Fig. 8.</a>, the intrinsics of event cameras could also be calibrated by Kalibr.
 </p>
 
 <div style="display: flex; justify-content: space-between;">
   <figure>
     <img src="https://arclab-hku.github.io/ecmd/assets/img/Event_streams_of_checkerboard.png" alt="Image 1" style="width: 100%; max-width: 100%;">
-    <figcaption id="Event streams of checkerboard">Fig. 2. Event streams of checkerboard</figcaption>
+    <figcaption id="Event streams of checkerboard">Fig. 7. Event streams of checkerboard</figcaption>
   </figure>
   <figure>
     <img src="https://arclab-hku.github.io/ecmd/assets/img/Reconstructed_image_of_checkerboard.png" alt="Image 2" style="width: 100%; max-width: 100%;">
-    <figcaption id="Reconstructed image of checkerboard">Fig. 3. Reconstructed image of checkerboard</figcaption>
+    <figcaption id="Reconstructed image of checkerboard">Fig. 8. Reconstructed image of checkerboard</figcaption>
   </figure>
 </div>
 
@@ -374,10 +401,10 @@ More details of the calibration sequence, platform layout, and reports of calibr
 <p style="text-align: justify;">
   Due to infrared cameras solely capturing the temperature rather than the intensity difference, we design a distinct 9&times;7 checkerboard to 
   make the pattern detectable for infrared cameras. 
-  As shown in <a href="#PCB checkerboard">Fig. 4.</a>, the checkerboard intervals are affixed with aluminum materials, and then using a heating plate 
+  As shown in <a href="#PCB checkerboard">Fig. 9.</a>, the checkerboard intervals are affixed with aluminum materials, and then using a heating plate 
   to raise the temperature of the checkerboard.
   Since the superior thermal dissipation of aluminum compared to plastic, a temperature contrast emerges between the two materials, enabling infrared 
-  cameras to distinctly capture the lattice shape of the checkerboard, as in <a href="#Infrared image of heated checkerboard">Fig. 5.</a>.
+  cameras to distinctly capture the lattice shape of the checkerboard, as in <a href="#Infrared image of heated checkerboard">Fig. 10.</a>.
   With the special infrared image of the checkerboard, intrinsic can be calibrated by Kalibr.
 </p>
 
@@ -399,7 +426,7 @@ More details of the calibration sequence, platform layout, and reports of calibr
 <picture>
 
   <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/infrared_calibration.JPG" title="sensors1">
-  <figcaption id="PCB checkerboard">Fig. 4. PCB checkerboard</figcaption>
+  <figcaption id="PCB checkerboard">Fig. 9. PCB checkerboard</figcaption>
 </picture>
 
 </figure>
@@ -411,7 +438,7 @@ More details of the calibration sequence, platform layout, and reports of calibr
 <picture>
 
   <img class="img-fluid rounded z-depth-1" src="https://arclab-hku.github.io/ecmd/assets/img/infrared_image.png" title="sensors2">
-  <figcaption id="Infrared image of heated checkerboard">Fig. 5. Infrared image of heated checkerboard</figcaption>
+  <figcaption id="Infrared image of heated checkerboard">Fig. 10. Infrared image of heated checkerboard</figcaption>
 </picture>
 
 </figure>
@@ -438,7 +465,7 @@ More details of the calibration sequence, platform layout, and reports of calibr
 
 <p style="text-align: justify;">
   For the calibration of mechanical LiDAR, LI-Init is capable of achieving temporal and spatial calibration for LiDAR and IMU without checkerboards 
-  or extra devices in <a href="#lidar_calibration">Fig. 5.</a>. 
+  or extra devices in <a href="#lidar_calibration">Fig. 11.</a>. 
   We rotate and move the device around the XYZ-axis to ensure sufficient excitation until the data accumulation is completed, thus we acquire the extrinsic 
   transformation between LiDAR and IMU.
 </p>
@@ -446,7 +473,7 @@ More details of the calibration sequence, platform layout, and reports of calibr
 <div style="display: flex; justify-content: space-between;text-align: center;">
   <figure>
     <img src="https://arclab-hku.github.io/ecmd/assets/img/lidar_calibration.png" alt="Image 1" style="width: 70%; max-width: 70%;">
-    <figcaption id="lidar_calibration">Fig. 6. Calibration between LiDAR and IMU</figcaption>
+    <figcaption id="lidar_calibration">Fig. 11. Calibration between LiDAR and IMU</figcaption>
   </figure>
 </div>
 
