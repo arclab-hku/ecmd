@@ -151,7 +151,7 @@
 
 <p style="text-align: justify;">
   The data collection platform is shown in <a href="#overview">Fig. 1.</a>. Our sensor suite consists of a multi-camera setup (event camera, industrial camera, 
-  and infrared camera) equipped with three LiDARs, high-quality IMU, three GNSS receivers, and GNSS-RTK/INS systems.
+  and infrared camera) equipped with three LiDARs, onboard IMU, two GNSS receivers, and GNSS-RTK/INS systems.
   The specific specifications of each sensor are presented in <a href="#Sensors specifications">Table. 1.</a> .
   An Intel NUC (i7-1260P, 32GB RAM) and an industrial computer (i7-10610U, 32GB RAM) are used to run sensor drivers, and record data into ROS bags on the Ubuntu system.
 <br>
@@ -179,10 +179,10 @@
 <br>
 </p>
 
-<h4>GNSS-RTK/INS</h4>
+<h4>Onboard IMU and GNSS-RTK/INS suite</h4>
 <p style="text-align: justify;">
-  A tactical-level Xsens-MTI-30 IMU is employed to collect the raw acceleration and angular velocity at 400 Hz.
-  The accurate ground-truth of localization is furnished by a centimeter-level GNSS-RTK/INS navigation system.
+  An onboard Xsens-MTI-30 IMU is employed to collect the raw acceleration and angular velocity at 400 Hz.
+  The accurate ground-truth of localization is furnished by a centimeter-level GNSS(GPS, GLONASS, and BeiDou)-RTK/INS(fiber-optic gyroscope) navigation system.
 <br>
 </p>
 
@@ -301,7 +301,7 @@ The details of full sensors setup can be found below:
   </td>
   </tr>
   <tr>
-  <td>U-BLOX ZED-F9P &times; 2</td>
+  <td>U-BLOX ZED-F9P</td>
   <td>
   <ul>
   <li>Automobile Level</li>
